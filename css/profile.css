@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "unicons";
+  src: url("fonts/unicons.woff2") format("woff2"), url("fonts/unicons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+input {
+  outline: none;
+  box-shadow: none;
+  border-radius: 2px;
+  border: 0.1px solid #cbcbcb;
+}
+input:hover {
+  border-color: rgb(248, 188, 11);
+}
+
+.pl::-moz-placeholder {
+  color: rgb(83, 82, 82);
+  opacity: 1;
+  font-weight: 600;
+}
+
+.pl::placeholder {
+  color: rgb(83, 82, 82);
+  opacity: 1;
+  font-weight: 600;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#header-nav {
+  padding: 0;
+}
+#header-nav div.cover {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 1em 0 0 0;
+}
+#header-nav div.cover li {
+  margin: auto 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+#header-nav div.cover div.vy {
+  width: 10%;
+}
+#header-nav div.cover div.vy ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0;
+  width: 120%;
+}
+#header-nav div.cover div.vy ul li {
+  cursor: pointer;
+}
+#header-nav div.cover div.vy ul li:first-child {
+  width: 50%;
+  height: 80%;
+  margin: 0;
+}
+#header-nav div.cover div.vy ul li img {
+  width: 100%;
+}
+#header-nav div.cover div.menu {
+  width: 30%;
+}
+#header-nav div.cover div.menu ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+#header-nav div.cover div.mode ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+#main {
+  background: url(../images/main.jpeg) no-repeat;
+  height: 38.625em;
+  background-position: bottom 8em right 12em;
+  background-size: 25em;
+  display: flex;
+  align-items: center;
+}
+#main div.wrapper {
+  width: 60%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#main div.wrapper p {
+  line-height: 1.5em;
+}
+#main div.wrapper p.welcome {
+  font-weight: 600;
+  color: rgb(71, 80, 88);
+  margin-left: 2em;
+}
+#main div.wrapper h1 {
+  font-weight: 700;
+  font-size: 3.125rem;
+  height: 90%;
+  display: flex;
+  align-items: center;
+}
+#main div.wrapper h1 span {
+  color: rgb(255, 188, 5);
+  margin-left: 0.35em;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+#main div.wrapper p.para {
+  font-size: 1.25rem;
+  color: rgb(102, 105, 107);
+}
+#main div.wrapper div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#main div.wrapper div a {
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+#main div.wrapper div a.fi {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(238, 239, 241);
+  padding: 4% 5%;
+  border-radius: 2em;
+  color: rgb(83, 84, 85);
+  height: 4em;
+}
+#main div.wrapper div a.fi img {
+  width: 10%;
+}
+#main div.wrapper div a.se {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 4%;
+  background-color: rgb(47, 46, 46);
+  color: #fff;
+  border-radius: 2em;
+  height: 4em;
+}
+
+#projects {
+  height: 46.875em;
+}
+#projects div.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+#projects div.wrapper h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+#projects div.wrapper div.works {
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+}
+#projects div.wrapper div.works div.item {
+  width: 92%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3.5em 0 2.125em;
+}
+#projects div.wrapper div.works div.item img {
+  width: 85%;
+  box-shadow: 0px -8px 35px 5px #888888;
+  border-radius: 0.375em;
+  z-index: 1;
+}
+#projects div.wrapper div.works div.owl-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#projects div.wrapper div.works div.owl-nav button {
+  position: absolute;
+}
+#projects div.wrapper div.works div.owl-nav button span {
+  font-size: 5em;
+}
+#projects div.wrapper div.works div.owl-nav button:hover {
+  color: rgb(248, 188, 11);
+  background-color: #fff;
+}
+#projects div.wrapper div.works div.owl-nav button.owl-prev {
+  left: -8em;
+  bottom: 18em;
+}
+#projects div.wrapper div.works div.owl-nav button.owl-next {
+  right: -8em;
+  bottom: 18em;
+}
+#projects div.wrapper div.works div.owl-dots {
+  margin-top: 0;
+}
+
+#contact {
+  height: 40em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#contact div.form {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#contact div.form form {
+  width: 30em;
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#contact div.form form .input {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#contact div.form form .input div {
+  width: 48%;
+}
+#contact div.form form .input div input {
+  padding: 0.7em;
+  width: 100%;
+}
+#contact div.form form .message textarea {
+  padding: 0.7em;
+  border: 0.1px solid #cbcbcb;
+}
+#contact div.form form .message textarea:hover {
+  border-color: rgb(248, 188, 11);
+}
+#contact div.form form .send {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#contact div.form form .send .submit {
+  width: 9em;
+  padding: 0.7em 2em;
+  background-color: rgb(255, 208, 0);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.125rem;
+}
+
+@media all and (min-width: 1350px) {
+  #main div.wrapper {
+    padding: 0 0 0 5em;
+  }
+}
+@media all and (min-width: 1200px) {
+  #main {
+    background-size: 25em;
+    background-position: bottom 8em right 12em;
+  }
+  #main div.wrapper {
+    padding: 0 0 0 3em;
+  }
+  #main div.wrapper p.para {
+    width: 80%;
+  }
+  #main div.wrapper div {
+    width: 27em;
+  }
+}
+@media all and (max-width: 1200px) {
+  #main {
+    background-size: 21em;
+    background-position: bottom 8em right 3em;
+  }
+  #main div.wrapper {
+    padding: 0 0 0 5em;
+  }
+}/*# sourceMappingURL=profile.css.map */
